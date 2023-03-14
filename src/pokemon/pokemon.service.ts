@@ -29,6 +29,8 @@ export class PokemonService {
   async create(createPokemonDto: CreatePokemonDto) {
     try {
       const pokemon = await this.pokemonModel.create(createPokemonDto);
+
+      console.log('hola');
       return pokemon;
     } catch (error) {
       this.handleExceptions(error);
